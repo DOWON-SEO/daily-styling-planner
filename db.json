@@ -1,0 +1,71 @@
+{
+    "public" : {
+        "items": [
+            {
+                "type": "tshirt",
+                "image": "../img/pink_t.png"
+            },
+            {
+                "type": "pants",
+                "image": "../img/blue_p.png"
+            },
+            {
+                "type": "pants",
+                "image": "../img/yellow_p.png"
+            },
+            {
+                "type": "skirt",
+                "image": "../img/yellow_s.png"
+            },
+            {
+                "type": "skirt",
+                "image": "../img/blue_s.png"
+            },
+            {
+                "type": "tshirt",
+                "image": "../img/blue_t.png"
+            },
+            {
+                "type": "tshirt",
+                "image": "../img/yellow_t.png"
+            },
+            {
+                "type": "pants",
+                "image": "../img/pink_p.png"
+            },
+            {
+                "type": "tshirt",
+                "image": "../img/pink_t.png"
+            },
+            {
+                "type": "pants",
+                "image": "../img/blue_p.png"
+            },
+            {
+                "type": "pants",
+                "image": "../img/yellow_p.png"
+            },
+            {
+                "type": "skirt",
+                "image": "../img/yellow_s.png"
+            },
+            {
+                "type": "skirt",
+                "image": "../img/blue_s.png"
+            },
+            {
+                "type": "tshirt",
+                "image": "../img/blue_t.png"
+            },
+            {
+                "type": "tshirt",
+                "image": "../img/yellow_t.png"
+            },
+            {
+                "type": "pants",
+                "image": "../img/pink_p.png"
+            }
+            ]
+    }
+   
+}
