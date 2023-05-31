@@ -9,6 +9,9 @@ app.get("/", (req, res) => {
     return res.render("index", {items : db.public.items})
 })
 
+app.get("/temperature", (req, res) => {
+    return res.render("temperature")
+})
 app.listen(8080, () => {
     console.log("server listening on 8080")
 })
