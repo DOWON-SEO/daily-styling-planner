@@ -41,16 +41,21 @@ a {
 }
 
 .navbar {
+    position : absolute;
+    top : 0;
+    left : 30%;
+    width : 40%;
+    height : 10%;
+    padding : 2em;
     /* display: flex; */
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background-color: var(--color-black);
-    padding: 8px 12px;
 }
 
 .navbar__logo {
     font-size: 24px;
     color: var(--text-color);
+    text-align: center;
 }
 
 .navbar__logo i {
