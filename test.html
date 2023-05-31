@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas Image Example</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="600"></canvas>
+
+    <script>
+        // Canvas 요소와 컨텍스트 가져오기
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext('2d');
+
+        // 이미지 로드
+        var image1 = new Image();
+        image1.src = 'img/blue_t.png';
+
+        var image2 = new Image();
+        image2.src = 'img/blue_s.png';
+
+        // 이미지 로드 완료 시 처리
+        image1.onload = function() {
+            drawImages();
+        };
+
+        image2.onload = function() {
+            drawImages();
+        };
+
+        // 이미지 그리기 함수
+        function drawImages() {
+            // 캔버스 지우기
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            // 첫 번째 이미지 그리기
+            context.drawImage(image1, 0, 0, canvas.width, canvas.height / 2);
+
+            // 두 번째 이미지 그리기
+            context.drawImage(image2, 0, canvas.height / 2, canvas.width, canvas.height / 2);
+        }
+    </script>
+</body>
+</html>

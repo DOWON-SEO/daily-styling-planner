@@ -1,3 +1,10 @@
+const toggleBtn= document.querySelector('.navbar__toggleBtn');
+const menu= document.querySelector('.navbar__menu');
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+
 // Fetch the items from the JSON file
 function loadItems() {
     return fetch('data/data.json')
@@ -34,9 +41,7 @@ function onButtonClick(event, items) {
 }
 
 function setEventListeners(items) {
-    const logo = document.querySelector('.logo');
     const buttons = document.querySelector('.buttons');
-    logo.addEventListener('click', () => displayItems(items));
     buttons.addEventListener('click', event => onButtonClick(event, items));
 }
 
