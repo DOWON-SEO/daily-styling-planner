@@ -6,7 +6,7 @@ app.set("view engine", "ejs")
 app.use(express.static("public"))
 
 app.get("/", (req, res) => {
-    return res.render("index", {itmes : db.public.items})
+    return res.render("index", {items : db.public.items})
 })
 
 app.listen(8080, () => {

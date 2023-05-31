@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -72,6 +72,12 @@
 </section>
 
 <!-- Items -->
-<ul class="items"></ul>
+<ul class="items">
+        <% for(var item of items){ %>
+            <li>
+                <img class = "thumbnail" src="<%= item.image %>" alt="">
+            </li>
+        <% } %>    
+</ul>
 </body>
 </html>
