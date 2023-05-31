@@ -1,0 +1,35 @@
+.navbar {
+    width : 100vw;
+    padding : 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar__logo {
+    font-size: 24px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.navbar__logo i {
+    color: var(--text-color);
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar__menu li {
+    padding: 8px 12px;
+}
+
+.navbar__menu li:hover {
+    background-color: var(--accent-color);
+    border-radius: 16px;
+}
