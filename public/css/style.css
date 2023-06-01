@@ -39,7 +39,7 @@
 
 .items {
     list-style: none;
-    background-color: #E3FDFD;
+    background-color: var(--items-bg-color);
     padding-left: 6px;
     border-radius: 8px;
     display: flex;

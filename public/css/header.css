@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #A6E3E9;
+    background-color: var(--nav-bg-color);
     padding: 12px;
     display: flex;
     flex-direction: column;
@@ -15,13 +15,14 @@
 }
 
 .navbar__menu {
-    font-weight: bold;
+    list-style: none;
     width: 50%;
     margin: 12px auto;
+    padding-left: 0;
+    font-weight: bold;
     display: flex;
     justify-content: space-between;
-    list-style: none;
-    padding-left: 0;
+    cursor: pointer;
 }
 
 .navbar__menu li {
