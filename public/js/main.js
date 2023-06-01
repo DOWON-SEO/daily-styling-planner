@@ -1,13 +1,8 @@
-const toggleBtn= document.querySelector('.navbar__toggleBtn');
 const menu= document.querySelector('.navbar__menu');
-
-toggleBtn.addEventListener('click', () => {
-    menu.classList.toggle('active');
-});
 
 // Fetch the items from the JSON file
 function loadItems() {
-    return fetch('data/data.json')
+    return fetch('db.json')
     .then(response => response.json())
     .then(json => json.items);
 }
@@ -52,10 +47,3 @@ loadItems()
     setEventListeners(items);
     })
     .catch(console.log);
-
-// window.initMap = function() {
-//   new google.maps.Map(document.querySelector("#map"), {
-//     center: { lat: 37.5639635,  lng: 126.8916867 },
-//     zoom: 10
-//   })
-// }
