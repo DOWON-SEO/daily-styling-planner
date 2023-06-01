@@ -25,6 +25,7 @@
 
     /* annimation */
     --animation-duration: 300ms;
+    user-select: none;
 }
 
 body {
