@@ -1,0 +1,50 @@
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .add-modal-container {
+    background-color: #fff;
+    top : 10%;
+    left : 30%;
+    width : 40%;
+  }
+
+  .add-form{
+    display : flex;
+    flex-direction: column;
+    margin : 0;
+  }
+
+  .add-form #imagePreview{
+    width : 100%;
+  }
+
+  .add-form #fileInput{
+    display : none;
+  }
+
+  .add-form input,select{
+    padding : 1em;
+  }
+
+  .add-form .drop-zone{
+    width : 100%;
+    height : 100%;
+    padding : 2em;
+  }
+
+  .add-form .drop-zone:hover{
+    cursor : pointer;
+  }
+
+  .add-form button{
+    padding : 1em 2em;
+  }
+
