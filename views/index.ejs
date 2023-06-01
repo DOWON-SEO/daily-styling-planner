@@ -10,30 +10,40 @@
 </head>
 <script>
     $(document).ready(function() {
+        //아이템 상하 스크롤시 막고 좌우 스크롤로 변경
         $('.items').on('wheel', function(event) {
             let scrollDistance = event.originalEvent.deltaY * 1;
             this.scrollLeft += scrollDistance;
             event.preventDefault();
         })
+        //계절별 버튼 클릭시, 배경색 및 강조색 변경
         $('.spring').click(function(){
-            $('.navbar').css('background-color', '#FDCEDF');
-            $('body').css('background-color', '#F8E8EE');
-            $('.items').css('background-color', '#F9F5F6');
+            $(':root')
+            .css('--nav-bg-color', '#FDCEDF')
+            .css('--body-bg-color', '#F8E8EE')
+            .css('--items-bg-color', '#F9F5F6')
+            .css('--accent-color', '#F2BED1');
         })
         $('.summer').click(function(){
-            $('.navbar').css('background-color', '#62CDFF');
-            $('body').css('background-color', '#97DEFF');
-            $('.items').css('background-color', '#C9EEFF');
+            $(':root')
+            .css('--nav-bg-color', '#62CDFF')
+            .css('--body-bg-color', '#97DEFF')
+            .css('--items-bg-color', '#C9EEFF')
+            .css('--accent-color', '#0081C9');
         })
         $('.autumn').click(function(){
-            $('.navbar').css('background-color', '#ECCDB4');
-            $('body').css('background-color', '#F0EDD4');
-            $('.items').css('background-color', '#F9FBE7');
+            $(':root')
+            .css('--nav-bg-color', '#ECCDB4')
+            .css('--body-bg-color', '#F0EDD4')
+            .css('--items-bg-color', '#F9FBE7')
+            .css('--accent-color', '#C38154');
         })
         $('.winter').click(function(){
-            $('.navbar').css('background-color', '#526D82');
-            $('body').css('background-color', '#9DB2BF');
-            $('.items').css('background-color', '#DDE6ED');
+            $(':root')
+            .css('--nav-bg-color', '#526D82')
+            .css('--body-bg-color', '#9DB2BF')
+            .css('--items-bg-color', '#DDE6ED')
+            .css('--accent-color', '#27374D');
         })
     })
 </script>
