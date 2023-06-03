@@ -5,6 +5,7 @@ const multer = require("multer")
 const crypto = require("crypto")
 const path = require("path")
 const fs = require("fs")
+const cors = require("cors")
 
 var storage = multer.diskStorage({
     destination: './uploads/',
@@ -25,6 +26,9 @@ app.use(express.static("public"))
 app.use(express.static("uploads"))
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cors({
+    origin: 'http://localhost:8080'
+}))
 
 app.get("/", (req, res) => {
     return res.render("index", {items : db.public.items})

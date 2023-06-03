@@ -1,5 +1,5 @@
 {
-    "public" : {
+    "public": {
         "items": [
             {
                 "type": "tshirt",
@@ -64,8 +64,15 @@
             {
                 "type": "pants",
                 "image": "../img/pink_p.png"
+            },
+            {
+                "img": "./uploads/0bc86a51f55c1978293350147638c640.png"
+            },
+            {
+                "img": "./uploads/e17d9b37ed82339191d91e15db931ec0.jpeg",
+                "name": "병신이다.",
+                "category": "반팔"
             }
-            ]
+        ]
     }
-   
 }
