@@ -8,17 +8,14 @@
     <div class="wrapper">
         <span id="map-loader"></span>
         <div class="content">
-            <div id="map"></div>
-            <div class="text">
-                <h4>사용자님이 현재 위치한곳의</h4>
-                <h3>현재 기온은 <span class ="temp"></span></h3>
-                <h3>체감 온도는 <span class="feels_like"></span></h3>
-                <h4>입니다.</h4>
-                
-                <span>너무 더운 날씨 얇은 옷차림을 입는 것이 좋을 것 같습니다.</span>
-
-                <button>내 옷장에서 추천해줘!</button>
+            <div class="temperature__guide">
+                <h4>사용자님이 현재 위치한곳의 온도</h4>
+                <div class="temp__text"><span class ="temp"></span>℃</div>
+                <div class="feels_like__text">체감 온도<span class="feels_like"></span>℃</div>
+                <span class="recommend__text">너무 더운 날씨 얇은 옷차림을 입는 것이 좋을 것 같습니다.</span>
+                <button class="recommend__btn">내 옷장에서 추천</button>
             </div>
+            <div id="map"></div>
         </div>
     </div>
 </body>
