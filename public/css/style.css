@@ -17,15 +17,15 @@
     flex-direction: column;
     align-items: center;
 }
-.sort__type, .sort__weather {
+.sort__type, .sort__season {
     margin: 12px;
 }
-.title__type, .title__weather {
+.title__type, .title__season {
     font-weight: bold;
     color: var(--color-white);
     margin-right: var(--base-space);
 }
-.typeBtn, .weatherBtn {
+.typeBtn, .seasonBtn {
     font-size: 18px;
 }
 
