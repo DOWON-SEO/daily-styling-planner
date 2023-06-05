@@ -82,9 +82,24 @@
                 "image" : "../img/shoes.png"
             },
             {
+                "category" : "운동화",
+                "type" : "신발",
+                "image" : "../img/shoes2.png"
+            },
+            {
                 "category" : "반바지",
                 "type" : "하의",
                 "image" : "../img/short-pants_1.png"
+            },
+            {
+                "category" : "운동화",
+                "type" : "신발",
+                "image" : "../img/vans.png"
+            },
+            {
+                "category" : "운동화",
+                "type" : "신발",
+                "image" : "../img/boots.png"
             },
             {
                 "category" : "반팔셔츠",
