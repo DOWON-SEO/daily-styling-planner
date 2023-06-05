@@ -16,40 +16,23 @@
             this.scrollLeft += scrollDistance;
             event.preventDefault();
         })
-        //계절별 버튼 클릭시, 배경색 및 강조색 변경
-        $('.spring').click(function(){
-            $(':root')
-            .css('--nav-bg-color', '#FDCEDF')
-            .css('--body-bg-color', '#F8E8EE')
-            .css('--items-bg-color', '#F9F5F6')
-            .css('--accent-color', '#F2BED1');
-        })
-        $('.summer').click(function(){
-            $(':root')
-            .css('--nav-bg-color', '#62CDFF')
-            .css('--body-bg-color', '#97DEFF')
-            .css('--items-bg-color', '#C9EEFF')
-            .css('--accent-color', '#0081C9');
-        })
-        $('.autumn').click(function(){
-            $(':root')
-            .css('--nav-bg-color', '#ECCDB4')
-            .css('--body-bg-color', '#F0EDD4')
-            .css('--items-bg-color', '#F9FBE7')
-            .css('--accent-color', '#C38154');
-        })
-        $('.winter').click(function(){
-            $(':root')
-            .css('--nav-bg-color', '#526D82')
-            .css('--body-bg-color', '#9DB2BF')
-            .css('--items-bg-color', '#DDE6ED')
-            .css('--accent-color', '#27374D');
-        })
-    })
 </script>
 <body>
 <%- include('header') %>
 <!-- Buttons -->
+<audio controls class = "spring">
+    <source src="/audio/spring.mp3" type="audio/mp3">
+</audio>
+<audio controls class = "summer">
+    <source src="/audio/summer.mp3" type="audio/mp3">
+</audio>
+<audio controls class = "autumn">
+    <source src="/audio/autumn.mp3" type="audio/mp3">
+</audio>
+<audio controls class = "winter">
+    <source src="/audio/winter.mp3" type="audio/mp3">
+</audio>
+
 <section class="sort__nav">
     <div class="sort__type">
         <span class="title__type">종류별</span>
@@ -63,18 +46,18 @@
             Shoes
         </button>
     </div>
-    <div class="sort__weather">
-        <span class="title__weather">계절별</span>
-        <button class="btn weatherBtn spring" data-key="weather" data-value="spring">
+    <div class="sort__season">
+        <span class="title__season">계절별</span>
+        <button data-season="spring" class="btn seasonBtn spring" data-key="season" data-value="spring">
             Spring
         </button>
-        <button class="btn weatherBtn summer" data-key="weather" data-value="summer">
+        <button data-season="summer" class="btn seasonBtn summer" data-key="season" data-value="summer">
             Summer
         </button>
-        <button class="btn weatherBtn autumn" data-key="weather" data-value="autumn">
+        <button data-season="autumn" class="btn seasonBtn autumn" data-key="season" data-value="autumn">
             Autumn
         </button>
-        <button class="btn weatherBtn winter" data-key="weather" data-value="winter">
+        <button data-season="winter" class="btn seasonBtn winter" data-key="season" data-value="winter">
             Winter
         </button>
     </div>
@@ -92,4 +75,6 @@
     </ul>   
 </div>
 </body>
+
+<script src = "/js/seasonBtns.js"></script>
 </html>
