@@ -2,87 +2,164 @@
     "public": {
         "items": [
             {
-                "category" : "반팔",
+                "category" : "반바지",
+                "type": "하의",
+                "image": "../img/blue_p.png"
+            },
+            {
+                "category" : "짧은치마",
+                "type": "하의",
+                "image": "../img/blue_s.png"
+            },
+            {
+                "category" : "반팔티",
+                "type": "상의",
+                "image": "../img/blue_t.png"
+            },
+            {
+                "category" : "운동화",
+                "type": "신발",
+                "image": "../img/boot.png"
+            },
+            {
+                "category" : "가디건",
+                "type": "상의",
+                "image": "../img/cardigan.png"
+            },
+            {
+                "category" : "겨울패딩",
+                "type": "상의",
+                "image": "../img/coat.png"
+            },
+            {
+                "category" : "환절기자켓",
+                "type": "상의",
+                "image": "../img/denim-jacket.png"
+            },
+            {
+                "category" : "후드티",
+                "type": "상의",
+                "image": "../img/hoodie_1.png"
+            },
+            {
+                "category" : "환절기자켓",
+                "type": "상의",
+                "image": "../img/jacket_1.png"
+            },
+            {
+                "category" : "청바지",
+                "type": "하의",
+                "image": "../img/jeans.png"
+            },
+            {
+                "category" : "가죽자켓",
+                "type": "상의",
+                "image": "../img/leather-jacket.png"
+            },
+            {
+                "category" : "청바지",
+                "type": "하의",
+                "image": "../img/long_pants_1.png"
+            },
+            {
+                "category" : "긴팔",
+                "type": "상의",
+                "image": "../img/long-sleeve_1.png"
+            },
+            {
+                "category" : "패딩",
+                "type": "상의",
+                "image": "../img/padding_1.png"
+            },
+            {
+                "category" : "반바지",
+                "type": "하의",
+                "image": "../img/pink_p.png"
+            },
+            {
+                "category" : "짧은치마",
+                "type": "하의",
+                "image": "../img/pink_s.png"
+            },
+            {
+                "category" : "반팔티",
                 "type": "상의",
                 "image": "../img/pink_t.png"
             },
             {
-                "type": "pants",
-                "image": "../img/blue_p.png"
+                "category" : "장화",
+                "type" : "신발",
+                "image" : "../img/rain-boots.png"
             },
             {
-                "type": "pants",
-                "image": "../img/yellow_p.png"
+                "category" : "우비",
+                "type" : "상의",
+                "image" : "../img/raincoat.png"
             },
             {
-                "type": "skirt",
-                "image": "../img/yellow_s.png"
+                "category" : "운동화",
+                "type" : "신발",
+                "image" : "../img/shoes.png"
             },
             {
-                "type": "skirt",
-                "image": "../img/blue_s.png"
+                "category" : "반바지",
+                "type" : "하의",
+                "image" : "../img/short-pants_1.png"
             },
             {
-                "type": "tshirt",
-                "image": "../img/blue_t.png"
+                "category" : "반팔셔츠",
+                "type" : "상의",
+                "image" : "../img/short-sleeve-shirts.png"
             },
             {
-                "type": "tshirt",
-                "image": "../img/yellow_t.png"
-            },
-            {
-                "type": "pants",
-                "image": "../img/pink_p.png"
-            },
-            {
-                "type": "tshirt",
-                "image": "../img/pink_t.png"
-            },
-            {
-                "type": "pants",
-                "image": "../img/blue_p.png"
-            },
-            {
-                "type": "pants",
-                "image": "../img/yellow_p.png"
-            },
-            {
-                "type": "skirt",
-                "image": "../img/yellow_s.png"
-            },
-            {
-                "type": "skirt",
-                "image": "../img/blue_s.png"
-            },
-            {
-                "type": "tshirt",
-                "image": "../img/blue_t.png"
-            },
-            {
-                "type": "tshirt",
-                "image": "../img/yellow_t.png"
-            },
-            {
-                "type": "pants",
-                "image": "../img/pink_p.png"
-            },
-            {
-                "img": "./uploads/0bc86a51f55c1978293350147638c640.png"
-            },
-            {
-                "type" : "short-sleeve",
+                "category" : "반팔티",
+                "type" : "상의",
                 "image" : "../img/short-sleeves_1.png"
             },
             {
-                "type" : "short-sleeve",
-                "image" : "../img/"
+                "category" : "반바지",
+                "type" : "하의",
+                "image" : "../img/shorts.png"
             },
             {
-                "type" : "jeans",
-                "image" : "../"
+                "category" : "슬리퍼",
+                "type" : "신발",
+                "image" : "../img/slippers.png"
             },
             {
-            
+                "category" : "환절기코트",
+                "type" : "상의",
+                "image" : "../img/suit.png"
+            },
+            {
+                "category" : "맨투맨",
+                "type" : "상의",
+                "image" : "../img/sweater.png"
+            },
+            {
+                "category" : "환절기코트",
+                "type" : "상의",
+                "image" : "../img/trench-coat.png"
+            },
+            {
+                "category" : "환절기코트",
+                "type" : "상의",
+                "image" : "../img/trench.png"
+            },
+            {
+                "category" : "반바지",
+                "type" : "하의",
+                "image" : "../img/yellow_p.png"
+            },
+            {
+                "category" : "짧은치마",
+                "type" : "하의",
+                "image" : "../img/yellow_s.png"
+            },
+            {
+                "category" : "반팔티",
+                "type" : "상의",
+                "image" : "../img/yellow_t.png"
             }
         ]
     }
