@@ -2,7 +2,8 @@
     "public": {
         "items": [
             {
-                "type": "tshirt",
+                "category" : "반팔",
+                "type": "상의",
                 "image": "../img/pink_t.png"
             },
             {
@@ -69,9 +70,19 @@
                 "img": "./uploads/0bc86a51f55c1978293350147638c640.png"
             },
             {
-                "img": "./uploads/e17d9b37ed82339191d91e15db931ec0.jpeg",
-                "name": "병신이다.",
-                "category": "반팔"
+                "type" : "short-sleeve",
+                "image" : "../img/short-sleeves_1.png"
+            },
+            {
+                "type" : "short-sleeve",
+                "image" : "../img/"
+            },
+            {
+                "type" : "jeans",
+                "image" : "../"
+            },
+            {
+            
             }
         ]
     }
