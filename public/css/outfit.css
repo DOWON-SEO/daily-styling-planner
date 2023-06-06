@@ -1,0 +1,10 @@
+.recommended {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+#myCanvas {
+    background-color: var(--items-bg-color);
+    border-radius: 16px;
+}
