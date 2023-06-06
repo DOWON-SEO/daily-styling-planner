@@ -71,11 +71,13 @@ function getOutfitsWithTemperatrue(temperature){
     const temp = {
         상의 : [],
         하의 : [],
+        신발 : [],
     }
 
     const result = {
         'top' : undefined,
         'bottom' : undefined,
+        'shoes' : undefined,
     }
 
     db.public.items.forEach(item => {
@@ -96,10 +98,16 @@ function getOutfitsWithTemperatrue(temperature){
                 temp[item.type].push(item)
             }
         }
+
+        if(item.type=="신발"){
+            temp["신발"].push(item)
+        }
     })
 
+    
     result.top = temp.상의[generateRandomInt(temp.상의.length)]
     result.bottom = temp.하의[generateRandomInt(temp.하의.length)]
+    result.shoes = temp.신발[generateRandomInt(temp.신발.length)]
 
     return result
 }
