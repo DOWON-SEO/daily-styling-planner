@@ -2,7 +2,7 @@ const content = document.querySelector('.content');
 const container = document.querySelector("#map")
 const mapLoader = document.querySelector("#map-loader")
 const tempSpan = document.querySelector("span.temp")
-const recommendOutFitBtn = document.querySelector(".recommend-outfit-btn")
+const recommendOutFitBtn = document.querySelector(".recommend__btn")
 
 const feelsLikeSpan = document.querySelector("span.feels_like")
 
@@ -15,8 +15,14 @@ navigator.geolocation.getCurrentPosition((position) => {
 
     getWeather(x, y)
     .then((res) => {
-        tempSpan.innerHTML = (res.temp - 273).toFixed(2);
-        feelsLikeSpan.innerHTML = (res.feels_like-  273).toFixed(2)
+        const temperature = (res.temp - 273).toFixed(2);
+        tempSpan.innerHTML = temperature
+        const feelsLikeTemperature = (res.feels_like-  273).toFixed(2)
+        feelsLikeSpan.innerHTML = feelsLikeTemperature
+
+        recommendOutFitBtn.addEventListener("click", () => {
+            window.location.href = `/outfit?temperature=${feelsLikeTemperature}`
+        })
     })
     const location  = new kakao.maps.LatLng(x, y);
 
@@ -35,25 +41,4 @@ navigator.geolocation.getCurrentPosition((position) => {
     content.style.display = "flex"
     map.relayout()
     map.setCenter(location)
-})
-
-let url = 'http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0'
-url += `ServiceKey=${serviceKey}&`
-url += `nx=11&`
-url += `ny=24&`
-
-fetch(url, {
-    mode : "no-cors",
-})
-.then(res => {
-    if(!res.ok){
-        console.log(res)
-    }
-    return res.json()
-})
-.then(body => {
-    console.log(body)
-})
-.catch(err => {
-    console.log(err)
 })
