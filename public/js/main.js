@@ -1,49 +1,16 @@
-const menu= document.querySelector('.navbar__menu');
+let clothesContainer = document.querySelector(".items__container .items");
 
-// Fetch the items from the JSON file
-function loadItems() {
-    return fetch('db.json')
-    .then(response => response.json())
-    .then(json => json.items);
+async function reloadClothes(temperature) {
+  clothesContainer.innerHTML = "";
+  const res = await fetch(`/clothe?temperature=${temperature}`);
+  const body = await res.json();
+
+  Object.keys(body.result).forEach((key) => {
+    body.result[key].forEach((item) => {
+      const el = document.createElement("li");
+      el.innerHTML = `<img class="item__thumbnail" src="${item.image}"></img>`;
+
+      clothesContainer.appendChild(el);
+    });
+  });
 }
-
-// Update the list with the given items
-function displayItems(items) {
-    const container = document.querySelector('.items');
-    container.innerHTML = items.map(item => createHTMLString(item)).join('');
-}
-
-// Create HTML list item from the given data item
-function createHTMLString(item) {
-    return `
-    <li class="item">
-        <img src="${item.image}" alt="${item.type}" class="item__thumbnail" />
-        <span class="item__description">${item.gender}, ${item.size}</span>
-    </li>
-    `;
-}
-
-function onButtonClick(event, items) {
-    const dataset = event.target.dataset;
-    const key = dataset.key;
-    const value = dataset.value;
-
-    if (key == null || value == null) {
-        return;
-    }
-
-    displayItems(items.filter(item => item[key] === value));
-}
-
-function setEventListeners(items) {
-    const buttons = document.querySelector('.buttons');
-    buttons.addEventListener('click', event => onButtonClick(event, items));
-}
-
-// main
-loadItems()
-    .then(items => {
-    displayItems(items);
-    setEventListeners(items);
-    })
-    .catch(console.log);

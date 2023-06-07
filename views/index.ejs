@@ -1,81 +1,151 @@
-
-
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daily Styling Planner</title>
     <!-- <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXHpgTVil-xqzRs4r-dnIHcqSIDI7uZ9I&callback=initMap"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<script>
-    $(document).ready(function() {
-        //아이템 상하 스크롤시 막고 좌우 스크롤로 변경
-        $('.items').on('wheel', function(event) {
-            let scrollDistance = event.originalEvent.deltaY * 1;
-            this.scrollLeft += scrollDistance;
-            event.preventDefault();
-        })
-    })
-</script>
-<body>
-<%- include('header') %>
-<!-- Buttons -->
-<audio controls class = "spring">
-    <source src="/audio/spring.mp3" type="audio/mp3">
-</audio>
-<audio controls class = "summer">
-    <source src="/audio/summer.mp3" type="audio/mp3">
-</audio>
-<audio controls class = "autumn">
-    <source src="/audio/autumn.mp3" type="audio/mp3">
-</audio>
-<audio controls class = "winter">
-    <source src="/audio/winter.mp3" type="audio/mp3">
-</audio>
+  </head>
+  <script>
+    $(document).ready(function () {
+      //아이템 상하 스크롤시 막고 좌우 스크롤로 변경
+      $(".items").on("wheel", function (event) {
+        let scrollDistance = event.originalEvent.deltaY * 1;
+        this.scrollLeft += scrollDistance;
+        event.preventDefault();
+      });
+    });
+  </script>
+  <body>
+    <%- include('header') %>
+    <!-- Buttons -->
+    <audio controls class="spring">
+      <source src="/audio/spring.mp3" type="audio/mp3" />
+    </audio>
+    <audio controls class="summer">
+      <source src="/audio/summer.mp3" type="audio/mp3" />
+    </audio>
+    <audio controls class="autumn">
+      <source src="/audio/autumn.mp3" type="audio/mp3" />
+    </audio>
+    <audio controls class="winter">
+      <source src="/audio/winter.mp3" type="audio/mp3" />
+    </audio>
 
-<section class="sort__nav">
-    <div class="sort__type">
+    <section class="sort__nav">
+      <div class="sort__type">
         <span class="title__type">종류별</span>
         <button class="btn typeBtn top" data-key="kind" data-value="top">
-            Top
+          Top
         </button>
         <button class="btn typeBtn pants" data-key="kind" data-value="pants">
-            Pants
+          Pants
         </button>
         <button class="btn typeBtn shoes" data-key="kind" data-value="shoes">
-            Shoes
+          Shoes
         </button>
-    </div>
-    <div class="sort__season">
+      </div>
+      <div class="sort__season">
         <span class="title__season">계절별</span>
-        <button data-season="spring" class="btn seasonBtn spring" data-key="season" data-value="spring">
-            Spring
+        <button
+          data-season="spring"
+          class="btn seasonBtn spring"
+          data-key="season"
+          data-value="spring"
+        >
+          Spring
         </button>
-        <button data-season="summer" class="btn seasonBtn summer" data-key="season" data-value="summer">
-            Summer
+        <button
+          data-season="summer"
+          class="btn seasonBtn summer"
+          data-key="season"
+          data-value="summer"
+        >
+          Summer
         </button>
-        <button data-season="autumn" class="btn seasonBtn autumn" data-key="season" data-value="autumn">
-            Autumn
+        <button
+          data-season="autumn"
+          class="btn seasonBtn autumn"
+          data-key="season"
+          data-value="autumn"
+        >
+          Autumn
         </button>
-        <button data-season="winter" class="btn seasonBtn winter" data-key="season" data-value="winter">
-            Winter
+        <button
+          data-season="winter"
+          class="btn seasonBtn winter"
+          data-key="season"
+          data-value="winter"
+        >
+          Winter
         </button>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Items -->
-<div class="items__container">
-    <ul class="items">
+    <!-- Items -->
+    <div class="items__container">
+      <ul class="items">
         <% for(var item of items){ %>
-            <li>
-                <img class = "item__thumbnail" src="<%= item.image %>" alt="">
-            </li>
-        <% } %>    
-</ul>
-    </ul>   
-</div>
-</body>
+        <li>
+          <img class="item__thumbnail" src="<%= item.image %>" alt="" />
+        </li>
+        <% } %>
+      </ul>
+      <div class="outfit-videos">
+        <iframe
+          class="default"
+          width="450"
+          height="315"
+          src="https://www.youtube.com/embed/45DgKavqOWg"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          class="winter-outfit"
+          width="450"
+          height="315"
+          src="https://www.youtube.com/embed/MKjHCUL1sIw"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          class="summer-outfit"
+          width="450"
+          height="315"
+          src="https://www.youtube.com/embed/SsES824Pwt0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          class="spring-outfit"
+          width="450"
+          height="315"
+          src="https://www.youtube.com/embed/rq5bjm5owEs"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          class="autumn-outfit"
+          width="450"
+          height="315"
+          src="https://www.youtube.com/embed/EqODV8ZC74U"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </body>
 
-<script src = "/js/seasonBtns.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/seasonBtns.js"></script>
 </html>
