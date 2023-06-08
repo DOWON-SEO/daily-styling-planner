@@ -1,5 +1,5 @@
 .btn {
-    color: var(--color-white);
+    color: var(--text-color);
     border: none;
     background: transparent;
     padding: 8px 12px;
@@ -22,7 +22,7 @@
 }
 .title__type, .title__season {
     font-weight: bold;
-    color: var(--color-white);
+    color: var(--text-color);
     margin-right: var(--base-space);
 }
 .typeBtn, .seasonBtn {
