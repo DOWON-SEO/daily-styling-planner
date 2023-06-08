@@ -12,7 +12,7 @@
 
 /* sort navigation */
 .sort__nav {
-    padding: 28px 0;
+    padding: 16px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,8 +71,12 @@
 
 iframe{
     display : none;
+    border-radius: 12px;
+    margin: 24px auto;
 }
 
 iframe.default{
     display : block;
+    border-radius: 12px;
+    margin: 24px auto;
 }
