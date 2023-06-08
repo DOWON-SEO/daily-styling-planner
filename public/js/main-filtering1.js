@@ -2,7 +2,7 @@
 
 // Fetch the items from tge JSON file
 function loadItems() {
-    return fetch("data/data.json")
+    return fetch("db.json")
     .then((response) => response.json());
     .then((json)=>json.items);
 }
@@ -10,7 +10,7 @@ function loadItems() {
 // Creates HTML element form given item
 function createElement(item) {
     const img= document.createElement("img");
-    img.setAttribute("class","thumbnail");
+    img.setAttribute("class","item__thumbnail");
     img.setAttribute("src",item.image);
 
     const span= document.createElement("span");
@@ -25,7 +25,7 @@ function createElement(item) {
     li.append(span);
     return li;
 }
-
+<img class = "item__thumbnail" src="<%= item.image %>" alt=""></img>
 // Handle button click
 function onButtonClick(event,items) {
     const target=event.target;
