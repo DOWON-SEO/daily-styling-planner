@@ -63,7 +63,6 @@ app.get("/clothe", (req, res) => {
   const temperature = req.query.temperature;
   const type = req.query.type;
 
-  console.log(req.query);
   let result;
 
   if (temperature) {

@@ -1,76 +1,83 @@
 <div class="add-modal-background">
-    <div class="add-modal-container">
-        <form class = "add-form" action="/add" method="post" enctype="multipart/form-data">
-            <div class="drop-zone">
-                <p>이미지를 드래그 앤 드롭하거나 클릭하여 선택하세요</p>
-                <img id="imagePreview" alt="">
-                <input type="file" name="img" id="fileInput" accept="images/*">
-            </div>
-            <select name="type" id="">
-                <option value="상의">상의</option>
-                <option value="하의">하의</option>
-                <option value="신발">신발</option>
-            </select>
-            <select name="category" id="">
-                <option value="">의류 종류를 선택하세요</option>
-                <option value="긴팔">긴팔</option>
-                <option value="후드티">후드티</option>
-                <option value="니트">니트</option>
-                <option value="반팔">반팔</option>
-                <option value="셔츠">셔츠</option>
-                <option value="긴바지">긴바지</option>
-                <option value="반바지">반바지</option>
-                <option value="경량패딩">경량패딩</option>
-                <option value="패딩">패딩</option>
-            </select>
-            <button>추가</button>
-        </form>
-    </div>
+  <div class="add-modal-container">
+    <form
+      class="add-form"
+      action="/add"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <div class="drop-zone">
+        <p>이미지를 드래그 앤 드롭하거나 클릭하여 선택하세요</p>
+        <img id="imagePreview" alt="" />
+        <input type="file" name="img" id="fileInput" accept="images/*" />
+      </div>
+      <select name="type" id="">
+        <option value="상의">상의</option>
+        <option value="하의">하의</option>
+        <option value="신발">신발</option>
+      </select>
+      <select name="category" id="">
+        <option value="">의류 종류를 선택하세요</option>
+        <option value="긴팔">긴팔</option>
+        <option value="반팔티">반팔티</option>
+        <option value="반팔셔츠">반팔셔츠</option>
+        <option value="맨투맨">맨투맨</option>
+        <option value="환절기자켓">환절기자켓</option>
+        <option value="청바지">청바지</option>
+        <option value="반바지">반바지</option>
+        <option value="겨울코트">겨울코트</option>
+        <option value="패딩">패딩</option>
+        <option value="가죽자켓">가죽자켓</option>
+        <option value="신발">신발</option>
+        <option value="가디건">가디건</option>
+      </select>
+      <button>추가</button>
+    </form>
+  </div>
 </div>
 
 <script>
-    const dropZone = document.querySelector('.drop-zone');
-        const fileInput = document.querySelector('#fileInput');
-        const imagePreview = document.querySelector('#imagePreview');
-        const dropPrompt = document.querySelector(".drop-zone p")
+  const dropZone = document.querySelector(".drop-zone");
+  const fileInput = document.querySelector("#fileInput");
+  const imagePreview = document.querySelector("#imagePreview");
+  const dropPrompt = document.querySelector(".drop-zone p");
 
-        dropZone.addEventListener('dragover', (e) => {
-            e.preventDefault();
-            dropZone.classList.add('drop-zone-hover');
-        });
-        
-        dropZone.addEventListener('dragleave', () => {
-            dropZone.classList.remove('drop-zone-hover');
-        });
-        
-        dropZone.addEventListener('drop', (e) => {
-            e.preventDefault();
-            dropZone.classList.remove('drop-zone-hover');
-            
-            const file = e.dataTransfer.files[0];
-            fileInput.files = e.dataTransfer.files;
-            
-            const reader = new FileReader();
-            reader.onload = () => {
-                imagePreview.src = reader.result;
-            }
-            reader.readAsDataURL(file);
+  dropZone.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    dropZone.classList.add("drop-zone-hover");
+  });
 
-            dropPrompt.style.display = "none"
-        });
-        
-        dropZone.addEventListener("click", () => {
-            fileInput.click()
-        })
-        
-        fileInput.addEventListener('change', () => {
-            const file = fileInput.files[0];
-            
-            const reader = new FileReader();
-            reader.onload = () => {
-                imagePreview.src = reader.result;
-            }
-            reader.readAsDataURL(file);
-        });
+  dropZone.addEventListener("dragleave", () => {
+    dropZone.classList.remove("drop-zone-hover");
+  });
+
+  dropZone.addEventListener("drop", (e) => {
+    e.preventDefault();
+    dropZone.classList.remove("drop-zone-hover");
+
+    const file = e.dataTransfer.files[0];
+    fileInput.files = e.dataTransfer.files;
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      imagePreview.src = reader.result;
+    };
+    reader.readAsDataURL(file);
+
+    dropPrompt.style.display = "none";
+  });
+
+  dropZone.addEventListener("click", () => {
+    fileInput.click();
+  });
+
+  fileInput.addEventListener("change", () => {
+    const file = fileInput.files[0];
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      imagePreview.src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  });
 </script>
-
