@@ -1,8 +1,17 @@
 let clothesContainer = document.querySelector(".items__container .items");
 
-async function reloadClothes(temperature) {
+async function reloadClothes(option) {
   clothesContainer.innerHTML = "";
-  const res = await fetch(`/clothe?temperature=${temperature}`);
+  let url = `/clothe?`;
+  if (option.temperature) {
+    url += `temperature=${option.temperature}&`;
+  }
+
+  if (option.type) {
+    url += `type=${option.type}`;
+  }
+
+  const res = await fetch(url);
   const body = await res.json();
 
   Object.keys(body.result).forEach((key) => {

@@ -66,7 +66,7 @@ $(".btn.seasonBtn").each((i, btn) => {
     seasons[season].audio.play();
     seasons[season].changeTheme();
 
-    reloadClothes(seasons[season].temperature);
+    reloadClothes({ temperature: seasons[season].temperature });
 
     Array.from(videoContainer.children).forEach((video) => {
       video.style.display = "none";

@@ -60,8 +60,19 @@ app.get("/add", (req, res) => {
 });
 
 app.get("/clothe", (req, res) => {
-  console.log(req.query.temperature);
-  const result = getOutfitsWithTemperatrue(req.query.temperature);
+  const temperature = req.query.temperature;
+  const type = req.query.type;
+
+  console.log(req.query);
+  let result;
+
+  if (temperature) {
+    result = getOutfitsWithTemperatrue(temperature);
+  } else if (type) {
+    result = getOutfitsWithType(type);
+  } else {
+    result = db.public.items;
+  }
 
   return res.status(200).json({
     result,
@@ -123,6 +134,17 @@ function getOutfitsWithTemperatrue(temperature) {
   });
 
   return temp;
+}
+
+function getOutfitsWithType(type) {
+  const result = {};
+  result[type] = [];
+
+  db.public.items.forEach((item) => {
+    if (item.type == type) result[type].push(item);
+  });
+
+  return result;
 }
 
 function generateRandomInt(max) {
