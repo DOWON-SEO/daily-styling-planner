@@ -1,5 +1,5 @@
 .btn {
-    color: var(--color-white);
+    color: var(--text-color);
     border: none;
     background: transparent;
     padding: 8px 12px;
@@ -12,7 +12,7 @@
 
 /* sort navigation */
 .sort__nav {
-    padding: 28px 0;
+    padding: 16px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,7 +22,7 @@
 }
 .title__type, .title__season {
     font-weight: bold;
-    color: var(--color-white);
+    color: var(--text-color);
     margin-right: var(--base-space);
 }
 .typeBtn, .seasonBtn {
@@ -71,8 +71,12 @@
 
 iframe{
     display : none;
+    border-radius: 12px;
+    margin: 24px auto;
 }
 
 iframe.default{
     display : block;
+    border-radius: 12px;
+    margin: 24px auto;
 }
