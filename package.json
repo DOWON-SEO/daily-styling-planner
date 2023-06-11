@@ -5,6 +5,7 @@
   "repository": "https://github.com/seungho-hub/daily-styling-planner.git",
   "author": "seungho-hub <63999413+kangseungho-hub@users.noreply.github.com>",
   "license": "MIT",
+  "scripts": {"start" : "node index.js"},
   "dependencies": {
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
